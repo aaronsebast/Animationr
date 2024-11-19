@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Riga</title>
+  <title>Animation</title>
   <style>
     body {
       margin: 0;
@@ -12,18 +12,20 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      background: #f4f4f4;
+      background: white;
+      font-family: Italian;
     }
 
     h1 {
-      font-size: 3rem;
-      font-family: Arial, sans-serif;
+      font-size: 2rem;
       font-weight: bold;
-      color: #black;
+      color: black;
       position: absolute;
-      animation: moveAround 5s infinite;
+      animation: moveAround 6s infinite ease-in-out, 
+                 colorChange 6s infinite, 
+                 rotateScale 6s infinite;
     }
-
+    
     @keyframes moveAround {
       0% {
         top: 10%;
@@ -46,9 +48,36 @@
         left: 10%;
       }
     }
+
+    @keyframes colorChange {
+      0% {
+        color: black;
+      }
+      25% {
+        color: Red;
+      }
+      50% {
+        color: Green;
+      }
+      75% {
+        color: Yellow;
+      }
+      100% {
+        color: blue;
+      }
+    }
+
+    @keyframes rotateScale {
+      0%, 100% {
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        transform: rotate(180deg) scale(1.5);
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>RIGA</h1>
+  <h1>ISMA</h1>
 </body>
 </html>
